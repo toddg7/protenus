@@ -1,0 +1,12 @@
+Hi $CUSTOMER_NAME,
+
+Thanks for providing that CSV extract. I took a look and noticed a couple of issues that might be the cause of our problems. First, there are two records (Sally Jenkins and Pablo Torre) with the same ID value of 123. Can you update one of those values to a number that is not already used as an ID?
+
+We usually recommend pipe characters or tabs as delimiters instead of commas. Since you're using pipe characters in the values, can you use tabs as the delimiter here? 
+
+Lastly, the 124 record (Ray Lewis) needs to escape the double quotes representing inches in the height. So it should look like "6’1"", 220lb. Linebacker".
+
+Let me know if anything I said could use some further clarification.
+
+Best,
+Todd
