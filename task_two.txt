@@ -1,0 +1,25 @@
+#1
+LastName,Start,End
+Southern,2020-01-03,2020-01-03
+Southern,2020-12-25,NULL
+
+
+#2
+SELECT p.FirstName, p.LastName, e.Location
+FROM patient p
+JOIN encounter e on e.Patient_ID = p.ID
+WHERE p.ID IN (
+SELECT e.Patient_ID
+FROM encounter e
+WHERE e.Start <= '2020-12-25' AND e.END >= '2020-12-25' OR e.Start = '2020-12-25' OR e.End = '2020-12-25'
+) AND e.Location IN (
+SELECT e.Location
+FROM encounter e
+WHERE e.Start <= '2020-12-25' AND e.END >= '2020-12-25' OR e.Start = '2020-12-25' OR e.End = '2020-12-25'
+)
+
+
+#3
+Surname,TimeInHospital,SayinHi
+Southern,2020-01-03-2020-01-03,Hello
+Southern,2020-12-25-NULL,Hello
